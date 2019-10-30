@@ -1,8 +1,8 @@
 #alert{
   display: none;
   position: absolute;
-  background: red;
-  border-radius: 3px;
+  background: RGBA(218, 48, 72, .9);
+  border-radius: 5px;
   padding: 3px;
   color: white !important;
   top: 55px;
@@ -39,5 +39,4 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 0;
   position: absolute;
   right: 10px;
-
 }

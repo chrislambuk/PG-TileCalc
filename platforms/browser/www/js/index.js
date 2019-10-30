@@ -43,13 +43,13 @@ function calculate() {
 	}m<sup>2</sup></span> YOU WILL NEED:</div>
   <div class="row">
     <div class="col">
-      <div class="card m-1 ml-3">
+      <div class="card m-1 ml-3 bg-warning">
         <div class='resultCalc card-header bg-dark text-light'>${result}</div>
         <div>TILES</div>
       </div>
     </div>
     <div class="col">
-      <div class="card m-1 mr-3">
+      <div class="card m-1 mr-3 bg-warning">
 			<div class="resultCalc card-header bg-dark text-light">${wastage}</div>
         <div>TILES +${Math.floor(waste.value * 100) - 100}%</div>
       </div>
@@ -57,14 +57,14 @@ function calculate() {
   </div>
   <div class="row">
     <div class="col">
-      <div class="card m-1 ml-3">
+      <div class="card m-1 ml-3 bg-warning">
 			<div class="resultCalc card-header bg-dark text-light">${adhesive}<small>kg</small></div>
 			<div>ADHESIVE
       </div>
 			</div>
     </div>
     <div class="col">
-      <div class="card m-1 mr-3">
+      <div class="card m-1 mr-3 bg-warning">
 			<div class="resultCalc card-header bg-dark text-light">${grout}<small>kg</small></div>
 			<div>GROUT
 			</div>
