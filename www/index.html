@@ -18,106 +18,89 @@
   <title>Tile Calculator</title>
 </head>
 
-<body>
+<body class='bg-light'>
   <header>
-    <div class="collapse bg-dark" id="navbarHeader">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-md-7 py-4">
-            <h4 class="text-white">Info</h4>
-            <p class="text-muted">Add the dimensions of the tiles you are using. Add the grout width you require. [See
-              the manufaturer for recommended values]. The wastage option is useful for
-              calculating extra tiles required for cutting and wastage - Default value is 10%.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="navbar navbar-dark bg-dark pt-3">
+    <div class="navbar navbar-dark bg-dark pt-4 fixed-top">
       <div class="container">
         <a href="#" class="navbar-brand mx-auto">
           <div>Tile Calculator</div>
         </a>
       </div>
-      <button id="helpBtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader">help
+      <button id="helpBtn" class="navbar-toggler" type="button" data-toggle="modal" data-target="#helpModal">help
       </button>
     </div>
   </header>
   <!-- width -->
-  <div class="container mt-2">
+  <div class="container">
     <div>
       <div>
-        <div class="text-center">
-
-        </div>
-        <div class="card">
+        <!-- card -->
+        <div class="card mb-2">
           <div class="card-header text-center">
-            <h5>Tile Dimensions</h5>
-            <small>Add the dimesions of the tiles and the desired grout width.</small>
+            <h5>Tile Info</h5>
+            <small>Tile dimensions and desired grout width.</small>
           </div>
-
-
-
           <div class="card-body bg-warning">
-
-              <div class="col">
-                <div class="input-group input-group-sm mb-3 ">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">Width</span>
-                  </div>
-                  <input id='tileWidth' type="number" class="form-control">
-                  <div class="input-group-append">
-                    <span class="input-group-text"><small>mm</small></span>
-                  </div>
+            <div class="col">
+              <div class="input-group input-group-sm mb-2 ">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Width</span>
+                </div>
+                <input id='tileWidth' type="number" class="form-control">
+                <div class="input-group-append">
+                  <span class="input-group-text"><small>mm</small></span>
                 </div>
               </div>
-              <!-- height -->
-              <div class="col">
-                <div class="input-group input-group-sm mb-3 mx-auto">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">Height</span>
-                  </div>
-                  <input id='tileHeight' type="number" class="form-control">
-                  <div class="input-group-append">
-                    <span class="input-group-text"><small>mm</small></span>
-                  </div>
+            </div>
+            <!-- height -->
+            <div class="col">
+              <div class="input-group input-group-sm mb-2 mx-auto">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Height</span>
+                </div>
+                <input id='tileHeight' type="number" class="form-control">
+                <div class="input-group-append">
+                  <span class="input-group-text"><small>mm</small></span>
                 </div>
               </div>
-              <!-- depth -->
-              <div class="col">
-                <div class="input-group input-group-sm mb-3 mx-auto">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">Depth</span>
-                  </div>
-                  <input id='tileDepth' type="number" class="form-control">
-                  <div class="input-group-append">
-                    <span class="input-group-text"><small>mm</small></span>
-                  </div>
+            </div>
+            <!-- depth -->
+            <div class="col">
+              <div class="input-group input-group-sm mb-2 mx-auto">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Depth</span>
+                </div>
+                <input id='tileDepth' type="number" class="form-control">
+                <div class="input-group-append">
+                  <span class="input-group-text"><small>mm</small></span>
                 </div>
               </div>
-              <!-- grout width -->
-              <div class="col">
-                <div class="input-group input-group-sm mb-3 max-auto">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">Grout Width</span>
-                  </div>
-                  <input id='groutWidth' type="number" class="form-control">
-                  <div class="input-group-append">
-                    <span class="input-group-text">mm</span>
-                  </div>
+            </div>
+            <!-- grout width -->
+            <div class="col">
+              <div class="input-group input-group-sm max-auto">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Grout Width</span>
+                </div>
+                <input id='groutWidth' type="number" class="form-control">
+                <div class="input-group-append">
+                  <span class="input-group-text"><small>mm</small></span>
                 </div>
               </div>
+            </div>
           </div>
         </div>
 
 
 
-        <div class="card my-3">
+        <div class="card my-1">
           <div class="card-header text-center">
             <h5>Tiling Info</h5>
+          </div>
             <div class='card-body'>
               <div class="col input-group input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Area</span>
+                  <span class="input-group-text">Area To Tile</span>
                 </div>
                 <input id='tileArea' type="number" class="form-control">
                 <div class="input-group-append">
@@ -142,7 +125,7 @@
         <div class="row">
           <div class="col-md-8 mx-auto">
             <div class="card text-center" id='resultCard'>
-              <h5 class="card-header">RESULT AREA</h5>
+              <!-- <h5 class="card-header bg-light">You Will Need:</h5> -->
               <div id='alertbox text-center'>
                 <small id='alert' class='text-danger text-center'>Please enter all information</small>
               </div>
@@ -162,6 +145,36 @@
       <button id='calc' class="text-white btn-primary btn-block">Calculate</button>
     </div>
   </footer>
+
+  <!-- HELP MODAL -->
+  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">How To Use The Calculator</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Input the dimensions of the tile you are using and the grout width you require. <br>The waste option is useful
+          for calculating extra tiles used for cutting, and wastage. The default is 10% and is a good start. <br>
+          Press <button class="btn-primary">Calculate</button> to see the recommended quantities for tiles, adhesive and
+          grout.
+          <hr>
+          <div class="text-center">
+            <a href="https://arqmedia.co.uk/tile-calc/"><small>More Info</small></a> |
+            <a href="https://arqmedia.co.uk/privacy-policy/"><small>Privacy Policy</small></a> |
+            <a href="https://arqmedia.co.uk/tcs/"><small>T&Cs</small></a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>

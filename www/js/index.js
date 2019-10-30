@@ -37,19 +37,19 @@ function calculate() {
 		);
 
 		resultOutput.innerHTML = `
-    <div class='card'>
-  <div class='card-header'>FOR <span class='highlight'>${
+    <div>
+  <div class='mb-2'>FOR <span class='highlight'>${
 		area.value
 	}m<sup>2</sup></span> YOU WILL NEED:</div>
   <div class="row">
     <div class="col">
-      <div class="card m-1 ml-3 bg-warning">
+      <div class="m-1 bg-danger">
         <div class='resultCalc card-header bg-dark text-light'>${result}</div>
         <div>TILES</div>
       </div>
     </div>
     <div class="col">
-      <div class="card m-1 mr-3 bg-warning">
+      <div class="m-1 bg-danger">
 			<div class="resultCalc card-header bg-dark text-light">${wastage}</div>
         <div>TILES +${Math.floor(waste.value * 100) - 100}%</div>
       </div>
@@ -57,14 +57,14 @@ function calculate() {
   </div>
   <div class="row">
     <div class="col">
-      <div class="card m-1 ml-3 bg-warning">
+      <div class="m-1 bg-danger">
 			<div class="resultCalc card-header bg-dark text-light">${adhesive}<small>kg</small></div>
 			<div>ADHESIVE
       </div>
 			</div>
     </div>
     <div class="col">
-      <div class="card m-1 mr-3 bg-warning">
+      <div class="m-1 bg-danger">
 			<div class="resultCalc card-header bg-dark text-light">${grout}<small>kg</small></div>
 			<div>GROUT
 			</div>

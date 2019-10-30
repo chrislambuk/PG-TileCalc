@@ -1,42 +1,48 @@
-#alert{
-  display: none;
-  position: absolute;
-  background: RGBA(218, 48, 72, .9);
-  border-radius: 5px;
-  padding: 3px;
-  color: white !important;
-  top: 55px;
-  left: 50%;
-  width: 200px;
-  margin-left: -100px;
+body {
+	margin-top: 80px;
 }
 
-.highlight{
-  border: 1px solid rgba(0,0,0,0.5);
-  padding: 5px 5px;
-  margin: 0 5px;
-  background: RGBA(252, 193, 53, 1.00);
-  border-radius: 3px;
-  font-weight: bold;
+#alert {
+	display: none;
+	position: absolute;
+	background: RGBA(218, 48, 72, 0.8);
+	border-radius: 5px;
+	padding: 3px;
+	color: white !important;
+	top: 9px;
+	left: 50%;
+	width: 200px;
+	margin-left: -100px;
 }
 
-.resultCalc{
-  font-weight: bold;
-  font-size: 2rem;
+.highlight {
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	padding: 4px 5px;
+	margin: 0 5px;
+	background: RGBA(252, 193, 53, 0.9);
+	border-radius: 3px;
+	font-weight: bold;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+.resultCalc {
+	font-weight: bold;
+	font-size: 2rem;
 }
 
-#helpBtn{
-  font-size: 1rem;
-  color: red;
-  height: 20px;
-  width: 40px;
-  padding: 0;
-  position: absolute;
-  right: 10px;
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+#helpBtn {
+	font-size: 1rem;
+	color: red;
+	height: 20px;
+	width: 40px;
+	padding: 0;
+	position: absolute;
+	right: 10px;
+	top: 40px;
+	border: none;
 }
