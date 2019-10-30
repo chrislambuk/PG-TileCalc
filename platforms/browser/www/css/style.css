@@ -1,11 +1,14 @@
 #alert{
+  display: none;
   position: absolute;
-  z-index: 10;
-  top: 70px;
+  background: red;
+  border-radius: 3px;
+  padding: 3px;
+  color: white !important;
+  top: 55px;
   left: 50%;
   width: 200px;
   margin-left: -100px;
-  transition: all 3s;
 }
 
 .highlight{

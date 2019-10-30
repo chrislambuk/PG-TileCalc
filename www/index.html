@@ -3,155 +3,157 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/sticky-footer.css">
-    <title>Tile Calculator</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sticky-footer.css">
+  <title>Tile Calculator</title>
 </head>
 
 <body>
-        <header>
-                <div class="collapse bg-dark" id="navbarHeader">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-8 col-md-7 py-4">
-                        <h4 class="text-white">Info</h4>
-                        <p class="text-muted">Add the dimensions of the tiles you are using. Add the grout width you require. [See the manufaturer for recommended values]. The wastage option is useful for
-                          calculating extra tiles required for cutting and wastage - Default value is 10%.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="navbar navbar-dark bg-dark">
-                  <div class="container">
-                    <a href="#" class="navbar-brand mx-auto">
-                      <div>Tile Calculator</div>
-                    </a>
-                  </div>
-                  <button id="helpBtn" class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarHeader">help
-                  </button>
-                </div>
-              </header>
-              <!-- width -->
-              <div class="container mt-2">
-                <div>
-                  <div>
-                    <h5 class="text-center mt-2 my-4">Tile Dimensions</h5>
-                    <div class='row'>
-                      <div class="col">
-                        <div class="input-group input-group-sm mb-3 ">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Tile Width</span>
-                          </div>
-                          <input id='tileWidth' type="number" class="form-control">
-                          <div class="input-group-append">
-                            <span class="input-group-text">mm</span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- height -->
-                      <div class="col">
-                        <div class="input-group input-group-sm mb-3 mx-auto">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Tile Height</span>
-                          </div>
-                          <input id='tileHeight' type="number" class="form-control">
-                          <div class="input-group-append">
-                            <span class="input-group-text">mm</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class='row'>
-                      <!-- depth -->
-                      <div class="col">
-                        <div class="input-group input-group-sm mb-3 mx-auto">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Tile Depth</span>
-                          </div>
-                          <input id='tileDepth' type="number" class="form-control">
-                          <div class="input-group-append">
-                            <span class="input-group-text">mm</span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- grout width -->
-                      <div class="col">
-                        <div class="input-group input-group-sm mb-3 max-auto">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Grout Width</span>
-                          </div>
-                          <input id='groutWidth' type="number" class="form-control">
-                          <div class="input-group-append">
-                            <span class="input-group-text">mm</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-            
-            
-                    <hr>
-                    <h5 class="text-center">Tiling Information</h5>
-                      <!-- area -->
-                          <div class="input-group input-group mb-2">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">Tile Area</span>
-                            </div>
-                            <input id='tileArea' type="number" class="form-control">
-                            <div class="input-group-append">
-                              <span class="input-group-text">m<sup>2</sup></span>
-                            </div>
-                          </div>
-                          <div class="input-group input-group mb-2">
-                            <div class="input-group-prepend">
-                              <label class="input-group-text" for="wasteVal">Wastage</label>
-                            </div>
-                            <select class="custom-select" id="wasteVal">
-                              <option selected value="1.1">10%</option>
-                              <option value="1.2">20%</option>
-                              <option value="1.3">30%</option>
-                            </select>
-                          </div>
-            
-            
-                    <div class="row">
-                      <div class="col-md-8 mx-auto">
-                        <div class="card text-center" id='resultCard'>
-                          <h5 class="card-header">RESULT AREA</h5>
-                          <div id='alertbox text-center'>
-                            <small id='alert' class='text-danger text-center'>Please enter all information</small>
-                          </div>
-                          <div class="card-body">
-                            <div id='result'></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">Info</h4>
+            <p class="text-muted">Add the dimensions of the tiles you are using. Add the grout width you require. [See
+              the manufaturer for recommended values]. The wastage option is useful for
+              calculating extra tiles required for cutting and wastage - Default value is 10%.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark pt-3">
+      <div class="container">
+        <a href="#" class="navbar-brand mx-auto">
+          <div>Tile Calculator</div>
+        </a>
+      </div>
+      <button id="helpBtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader">help
+      </button>
+    </div>
+  </header>
+  <!-- width -->
+  <div class="container mt-2">
+    <div>
+      <div>
+        <h5 class="text-center mt-2 my-4">Tile Dimensions</h5>
+        <div class='row'>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3 ">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Width</span>
+              </div>
+              <input id='tileWidth' type="number" class="form-control">
+              <div class="input-group-append">
+                <span class="input-group-text">mm</span>
               </div>
             </div>
-            <footer class="footer text-muted">
-                <div class="container text-center">
-                    <button id='calc' class="text-white btn-primary btn-sm btn-block">Calculate</button>
-                </div>
-              </footer>
-            <script src="js/jquery-3.4.1.min.js"></script>
-            <script src="js/bootstrap.bundle.min.js"></script>
-            <script src="js/app.js"></script>
+          </div>
+          <!-- height -->
+          <div class="col">
+            <div class="input-group input-group-sm mb-3 mx-auto">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Height</span>
+              </div>
+              <input id='tileHeight' type="number" class="form-control">
+              <div class="input-group-append">
+                <span class="input-group-text">mm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <!-- depth -->
+          <div class="col">
+            <div class="input-group input-group-sm mb-3 mx-auto">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Depth</span>
+              </div>
+              <input id='tileDepth' type="number" class="form-control">
+              <div class="input-group-append">
+                <span class="input-group-text">mm</span>
+              </div>
+            </div>
+          </div>
+          <!-- grout width -->
+          <div class="col">
+            <div class="input-group input-group-sm mb-3 max-auto">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Grout Width</span>
+              </div>
+              <input id='groutWidth' type="number" class="form-control">
+              <div class="input-group-append">
+                <span class="input-group-text">mm</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+
+        <hr>
+        <h5 class="text-center">Tiling Information</h5>
+        <!-- area -->
+        <div class="input-group input-group mb-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Tile Area</span>
+          </div>
+          <input id='tileArea' type="number" class="form-control">
+          <div class="input-group-append">
+            <span class="input-group-text">m<sup>2</sup></span>
+          </div>
+        </div>
+        <div class="input-group input-group mb-2">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="wasteVal">Wastage</label>
+          </div>
+          <select class="custom-select" id="wasteVal">
+            <option selected value="1.1">10%</option>
+            <option value="1.2">20%</option>
+            <option value="1.3">30%</option>
+          </select>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="card text-center" id='resultCard'>
+              <h5 class="card-header">RESULT AREA</h5>
+              <div id='alertbox text-center'>
+                <small id='alert' class='text-danger text-center'>Please enter all information</small>
+              </div>
+              <div class="card-body">
+                <div id='result'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <footer class="footer text-muted">
+    <div class="container text-center">
+      <button id='calc' class="text-white btn-primary btn-sm btn-block">Calculate</button>
+    </div>
+  </footer>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>
