@@ -30,15 +30,26 @@
       </button>
     </div>
   </header>
+
   <!-- width -->
-  <div class="container">
-    <div>
-      <div>
+  <main class="container">
+          <div class="row">
+              <div class="col-12 mb-2">
+                <div class="card text-center" id='resultCard'>
+                  <!-- <h5 class="card-header bg-light">You Will Need:</h5> -->
+                  <div id='alertbox text-center'>
+                    <small id='alert' class='text-danger text-center'>Please enter all information</small>
+                  </div>
+                  <div class="card-body">
+                    <div id='result'></div>
+                  </div>
+                </div>
+              </div>
+            </div>
         <!-- card -->
         <div class="card mb-2">
           <div class="card-header text-center">
             <h5>Tile Info</h5>
-            <small>Tile dimensions and desired grout width.</small>
           </div>
           <div class="card-body bg-warning">
             <div class="col">
@@ -119,27 +130,14 @@
               </div>
             </div>
           </div>
-        </div>
+        </main>
 
 
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <div class="card text-center" id='resultCard'>
-              <!-- <h5 class="card-header bg-light">You Will Need:</h5> -->
-              <div id='alertbox text-center'>
-                <small id='alert' class='text-danger text-center'>Please enter all information</small>
-              </div>
-              <div class="card-body">
-                <div id='result'></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-  </div>
-  </div>
+
+
+
+
   <footer class="footer text-muted">
     <div class="text-center bg-primary">
       <button id='calc' class="text-white btn-primary btn-block">Calculate</button>
@@ -158,13 +156,14 @@
           </button>
         </div>
         <div class="modal-body">
-          Input the dimensions of the tile you are using and the grout width you require. <br>The waste option is useful
+          <small>
+            Input the dimensions of the tile you are using and the grout width you require. <br>The waste option is useful
           for calculating extra tiles used for cutting, and wastage. The default is 10% and is a good start. <br>
-          Press <button class="btn-primary">Calculate</button> to see the recommended quantities for tiles, adhesive and
-          grout.
+          Click Calculate to see the recommended quantities for tiles, adhesive andgrout.
+          </small>
           <hr>
           <div class="text-center">
-            <a href="https://arqmedia.co.uk/tile-calc/"><small>More Info</small></a> |
+            <a href="https://arqmedia.co.uk/tile-calc/"><small>Info</small></a> |
             <a href="https://arqmedia.co.uk/privacy-policy/"><small>Privacy Policy</small></a> |
             <a href="https://arqmedia.co.uk/tcs/"><small>T&Cs</small></a>
           </div>
