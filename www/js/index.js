@@ -30,11 +30,12 @@ function onDeviceReady() {
 			let tileLength = parseFloat(width.value) + parseFloat(height.value);
 			let result = Math.ceil((area.value * 1000000) / tileArea);
 			let wastage = Math.ceil(result * waste.value);
-			let adhesive = area.value * 3;
+			let adhesive = Math.ceil(area.value * 3);
 			let grout = Math.ceil(
 				((tileLength * tDepth.value * gWidth.value * 1.65) / tileArea) *
-					area.value
+					(area.value * waste.value)
 			);
+
 			resultOutput.innerHTML = `
     <div>
   <div class='mb-2'>FOR <span class='highlight'>${
