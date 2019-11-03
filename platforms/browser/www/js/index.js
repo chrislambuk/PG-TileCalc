@@ -1,42 +1,41 @@
 document.addEventListener('deviceready', onDeviceReady, false);
 
-function onDeviceReady(){
-  const width = document.getElementById('tileWidth');
-const height = document.getElementById('tileHeight');
-const tDepth = document.getElementById('tileDepth');
-const gWidth = document.getElementById('groutWidth');
-const area = document.getElementById('tileArea');
-const waste = document.getElementById('wasteVal');
-const percent = waste.value;
+function onDeviceReady() {
+	const width = document.getElementById('tileWidth');
+	const height = document.getElementById('tileHeight');
+	const tDepth = document.getElementById('tileDepth');
+	const gWidth = document.getElementById('groutWidth');
+	const area = document.getElementById('tileArea');
+	const waste = document.getElementById('wasteVal');
+	const percent = waste.value;
 
-const resultOutput = document.getElementById('result');
+	const resultOutput = document.getElementById('result');
 
-document.addEventListener('DOMContentLoaded', reset);
-document.getElementById('calc').addEventListener('click', calculate);
+	document.addEventListener('DOMContentLoaded', reset);
+	document.getElementById('calc').addEventListener('click', calculate);
 
-function reset() {
-	document.getElementById('alert').style.display = 'none';
-}
+	function reset() {
+		document.getElementById('alert').style.display = 'none';
+	}
 
-function calculate() {
-	if (
-		width.value !== '' &&
-		height.value !== '' &&
-		tDepth.value !== '' &&
-		gWidth.value !== '' &&
-		area.value !== ''
-	) {
-		let tileArea = width.value * height.value;
-		let tileLength = parseFloat(width.value) + parseFloat(height.value);
-		let result = Math.ceil((area.value * 1000000) / tileArea);
-		let wastage = Math.ceil(result * waste.value);
-		let adhesive = area.value * 3;
-		let grout = Math.round(
-			((tileLength * tDepth.value * gWidth.value * 1.65) / tileArea) *
-			area.value
-		);
-
-		resultOutput.innerHTML = `
+	function calculate() {
+		if (
+			width.value !== '' &&
+			height.value !== '' &&
+			tDepth.value !== '' &&
+			gWidth.value !== '' &&
+			area.value !== ''
+		) {
+			let tileArea = width.value * height.value;
+			let tileLength = parseFloat(width.value) + parseFloat(height.value);
+			let result = Math.ceil((area.value * 1000000) / tileArea);
+			let wastage = Math.ceil(result * waste.value);
+			let adhesive = area.value * 3;
+			let grout = Math.ceil(
+				((tileLength * tDepth.value * gWidth.value * 1.65) / tileArea) *
+					area.value
+			);
+			resultOutput.innerHTML = `
     <div>
   <div class='mb-2'>FOR <span class='highlight'>${
 		area.value
@@ -73,12 +72,22 @@ function calculate() {
   </div>
 </div>
     `;
-	} else {
-		setTimeout(() => {
-			document.getElementById('alert').style.display = 'none';
-		}, 3000);
-		document.getElementById('alert').style.display = 'block';
+		} else {
+			setTimeout(() => {
+				document.getElementById('alert').style.display = 'none';
+			}, 3000);
+			document.getElementById('alert').style.display = 'block';
+		}
 	}
-}
 
+	document.getElementById('clear').addEventListener('click', clear);
+
+	function clear() {
+		width.value = '';
+		height.value = '';
+		tDepth.value = '';
+		gWidth.value = '';
+		area.value = '';
+		resultOutput.innerHTML = ``;
+	}
 }
