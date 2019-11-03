@@ -14,7 +14,7 @@
     <plugin name="cordova-plugin-statusbar" source="npm" spec="2.4.3" />
     <platform name="ios">
         <preference name="StatusBarOverlaysWebView" value="true" />
-        <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
+        <icon height="1024" platform="ios" src="www/res/icon/ios/icon.png" width="1024" />
         <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />
         <icon height="40" platform="ios" src="www/res/icon/ios/icon-40.png" width="40" />
         <icon height="80" platform="ios" src="www/res/icon/ios/icon-40@2x.png" width="80" />
