@@ -15,7 +15,7 @@ function onDeviceReady() {
 	document.getElementById('calc').addEventListener('click', calculate);
 
 	function reset() {
-		document.getElementById('alert').style.display = 'none';
+		document.getElementById('alert').style.display = 'block';
 	}
 
 	function calculate() {
@@ -37,34 +37,38 @@ function onDeviceReady() {
 			);
 
 			resultOutput.innerHTML = `
-    <div>
-  <div class='mb-2'>FOR <span class='highlight'>${
-		area.value
-	}m<sup>2</sup></span> YOU WILL NEED:</div>
-  <div class="row">
+		<div>
+		<div class='card-header'>
+		
+		<div class='my-2'>AREA: <span class='highlight'>${area.value}m<sup>2</sup></span></div>
+		<div class='my-2'>TILE SIZE: <span class='highlight'>${width.value}mm x ${height.value}mm x ${tDepth.value}mm</span></div>
+		<div class='my-2'>GROUT WIDTH: <span class='highlight'>${gWidth.value}mm</span></div>
+		
+		</div>
+  <div class="row text-center">
     <div class="col">
-      <div class="m-1 bg-danger">
+      <div class="m-1 bg-danger text-light">
         <div class='resultCalc card-header bg-dark text-light'>${result}</div>
         <div>TILES</div>
       </div>
     </div>
     <div class="col">
-      <div class="m-1 bg-danger">
+      <div class="m-1 bg-danger text-light">
 			<div class="resultCalc card-header bg-dark text-light">${wastage}</div>
         <div>TILES +${Math.floor(waste.value * 100) - 100}%</div>
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row text-center">
     <div class="col">
-      <div class="m-1 bg-danger">
+      <div class="m-1 bg-danger text-light">
 			<div class="resultCalc card-header bg-dark text-light">${adhesive}<small>kg</small></div>
 			<div>ADHESIVE
       </div>
 			</div>
     </div>
     <div class="col">
-      <div class="m-1 bg-danger">
+      <div class="m-1 bg-danger text-light">
 			<div class="resultCalc card-header bg-dark text-light">${grout}<small>kg</small></div>
 			<div>GROUT
 			</div>
@@ -72,7 +76,9 @@ function onDeviceReady() {
     </div>
   </div>
 </div>
-    `;
+		`;
+		
+
 		} else {
 			setTimeout(() => {
 				document.getElementById('alert').style.display = 'none';

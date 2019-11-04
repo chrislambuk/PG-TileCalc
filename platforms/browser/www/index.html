@@ -7,7 +7,7 @@
   <meta name="msapplication-tap-highlight" content="no" />
   <meta name="viewport"
     content="viewport-fit=cover, initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
-    <meta http-equiv="Content-Security-Policy"
+  <meta http-equiv="Content-Security-Policy"
     content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: *" />
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -33,12 +33,11 @@
     <div class="container col-md-8">
       <div>
         <div class="mb-2">
-          <div class="card text-center" id='resultCard'>
-            <!-- <h5 class="card-header bg-light">You Will Need:</h5> -->
+          <div class="card" id='resultCard'>
             <div id='alertbox text-center'>
               <small id='alert' class='text-danger text-center'>Please enter all info</small>
             </div>
-            <div class="card-body">
+            <div>
               <div id='result'></div>
             </div>
           </div>
@@ -133,13 +132,7 @@
       </div>
     </div>
   </main>
-
-
-
-
-
-
-
+  <!-- footer -->
   <footer class="footer text-muted">
     <div class="text-center text-white">
       <div class="row">
@@ -162,14 +155,16 @@
         </div>
         <div class="modal-body">
           <small>
-            Input the dimensions of the tile you are using and the grout width you require in mm. <br>The waste option is used to calculate extra tiles for cutting, and wastage. The default is 10% and is a good start. <br>
-            Click Calculate to see the recommended quantities for tiles, adhesive and grout. This is a guide so please check with your supplier before purchasing.
+            Input the dimensions of the tile you are using and the grout width you require in mm. <br>The waste option
+            is used to calculate extra tiles for cutting, and wastage. The default is 10% and is a good start. <br>
+            Click Calculate to see the recommended quantities for tiles, adhesive and grout. This is a guide so please
+            check with your supplier before purchasing.
           </small>
           <br>
           <br>
           <div class="text-center">
             <a href="https://arqmedia.co.uk/tile-calc/"><small>Info</small></a> |
-            <a href="https://arqmedia.co.uk/privacy-policy/"><small>Privacy Policy</small></a> | 
+            <a href="https://arqmedia.co.uk/privacy-policy/"><small>Privacy Policy</small></a> |
             <a href="https://arqmedia.co.uk/tcs/"><small>T&Cs</small></a>
           </div>
         </div>
@@ -183,12 +178,6 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
-  <script>
-    $('#myModal').on('shown.bs.modal', function () {
-      $('#myInput').trigger('focus')
-    });
-  </script>
-
 </body>
 
 </html>
