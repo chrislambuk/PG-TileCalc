@@ -38,40 +38,37 @@ function onDeviceReady() {
 
 			resultOutput.innerHTML = `
 		<div>
-		<div class='card-header'>
-		
-		<div class='my-2'>AREA: <span class='highlight'>${area.value}m<sup>2</sup></span></div>
-		<div class='my-2'>TILE SIZE: <span class='highlight'>${width.value}mm x ${height.value}mm x ${tDepth.value}mm</span></div>
-		<div class='my-2'>GROUT WIDTH: <span class='highlight'>${gWidth.value}mm</span></div>
-		
-		</div>
+		<h5>SUMMARY</h5>		
+		<hr>
+		<div  class='my-2'><small>AREA: <span class='highlight'>${area.value}m<sup>2</sup></span></small></div>
+		<div  class='my-2'><small>TILE SIZE: <span class='highlight'>${width.value}mm x ${height.value}mm x ${tDepth.value}mm</span></small></div>
+		<div  class='my-2'><small>GROUT WIDTH: <span class='highlight'>${gWidth.value}mm</span></small>
+		<hr></div>
   <div class="row text-center">
-    <div class="col">
-      <div class="m-1 bg-danger text-light">
-        <div class='resultCalc card-header bg-dark text-light'>${result}</div>
-        <div>TILES</div>
+    <div class="col mb-1">
+      <div>
+        <div class='resultCalc py-3 bg-dark text-light'>${result}</div>
+        <div class='bg-danger text-light'>TILES</div>
       </div>
     </div>
-    <div class="col">
-      <div class="m-1 bg-danger text-light">
-			<div class="resultCalc card-header bg-dark text-light">${wastage}</div>
-        <div>TILES +${Math.floor(waste.value * 100) - 100}%</div>
+    <div class="col mb-1">
+      <div>
+			<div class="resultCalc py-3 bg-dark text-light">${wastage}</div>
+        <div class='bg-danger text-light'>TILES +${Math.floor(waste.value * 100) - 100}%</div>
       </div>
     </div>
   </div>
   <div class="row text-center">
-    <div class="col">
-      <div class="m-1 bg-danger text-light">
-			<div class="resultCalc card-header bg-dark text-light">${adhesive}<small>kg</small></div>
-			<div>ADHESIVE
-      </div>
+    <div class="col mb-1">
+      <div>
+			<div class="resultCalc py-3 bg-dark text-light">${adhesive}<small>kg</small></div>
+			<div class='bg-danger text-light'>ADHESIVE</div>
 			</div>
     </div>
-    <div class="col">
-      <div class="m-1 bg-danger text-light">
-			<div class="resultCalc card-header bg-dark text-light">${grout}<small>kg</small></div>
-			<div>GROUT
-			</div>
+    <div class="col mb-1">
+      <div>
+			<div class="resultCalc py-3 bg-dark text-light">${grout}<small>kg</small></div>
+			<div class='bg-danger text-light'>GROUT</div>
       </div>
     </div>
   </div>

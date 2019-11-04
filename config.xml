@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.arqmedia.tilecalc" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.arqmedia.tilecalc" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Tile Calc</name>
     <description>
-        A simple tile calculating app.
+        A tile calculating app.
     </description>
     <author email="info@arqmedia.co.uk" href="http://arqmedia.co.uk">
         Chris Lamb
