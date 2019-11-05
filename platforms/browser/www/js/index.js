@@ -31,8 +31,7 @@ function onDeviceReady() {
 			let result = Math.ceil((area.value * 1000000) / tileArea);
 			let wastage = Math.ceil(result * waste.value);
 			let adhesive = Math.ceil(area.value * 3);
-			let grout = Math.ceil(
-				((tileLength * tDepth.value * gWidth.value * 1.65) / tileArea) *
+			let grout = Math.ceil(((tileLength * tDepth.value * gWidth.value * 1.65) / tileArea) *
 					(area.value * waste.value)
 			);
 
@@ -54,7 +53,9 @@ function onDeviceReady() {
     <div class="col mb-1">
       <div>
 			<div class="resultCalc py-3 bg-dark text-light">${wastage}</div>
-        <div class='bg-danger text-light'>TILES +${Math.floor(waste.value * 100) - 100}%</div>
+        <div class='bg-danger text-light'>TILES +${Math.floor(
+					waste.value * 100
+				) - 100}%</div>
       </div>
     </div>
   </div>
@@ -74,8 +75,6 @@ function onDeviceReady() {
   </div>
 </div>
 		`;
-		
-
 		} else {
 			setTimeout(() => {
 				document.getElementById('alert').style.display = 'none';
