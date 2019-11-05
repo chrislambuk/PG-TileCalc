@@ -22,7 +22,7 @@
         <a href="#" class="navbar-brand mx-auto pt-2">
           <h5>Tile Calculator</h5>
         </a>
-        <button id="helpBtn" class="navbar-toggler" type="button" data-toggle="modal" data-target="#helpModal">help
+        <button id="helpBtn" class="navbar-toggler" data-toggle="modal" data-target="#helpModal">help
         </button>
       </div>
     </div>
@@ -32,7 +32,7 @@
   <main>
     <div class="container col-md-8">
       <div>
-        <div class="mb-2">
+        <!-- <div class="mb-2">
           <div class="card" id='resultCard'>
             <div id='alertbox text-center'>
               <small id='alert' class='text-danger text-center'>Please enter all info</small>
@@ -43,7 +43,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- tile info -->
         <div class="card mb-2">
           <div class="card-header text-center">
@@ -139,7 +139,7 @@
   <footer class="footer">
     <div class="container col-md-8 mx-auto">
       <div class="row text-center text-white">
-        <div id='calc' class="bg-primary col p-0">Calculate</div>
+        <div id='calc' class="bg-primary col p-0" data-toggle="modal" data-target="#resultModal">Calculate</div>
         <div id='clear' class="bg-secondary col p-0">Clear</div>
       </div>
     </div>
@@ -180,6 +180,28 @@
       </div>
     </div>
   </div>
+
+  <!-- RESULT MODAL -->
+  <div class="modal fade" id="resultModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">RESULTS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+<div id="results"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <script type="text/javascript" src="cordova.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>

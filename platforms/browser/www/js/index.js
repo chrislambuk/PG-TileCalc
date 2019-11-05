@@ -31,17 +31,22 @@ function onDeviceReady() {
 			let result = Math.ceil((area.value * 1000000) / tileArea);
 			let wastage = Math.ceil(result * waste.value);
 			let adhesive = Math.ceil(area.value * 3);
-			let grout = Math.ceil(((tileLength * tDepth.value * gWidth.value * 1.65) / tileArea) *
+			let grout = Math.ceil(
+				((tileLength * tDepth.value * gWidth.value * 1.65) / tileArea) *
 					(area.value * waste.value)
 			);
 
-			resultOutput.innerHTML = `
+			results.innerHTML = `
 		<div>
-		<h5>SUMMARY</h5>		
-		<hr>
-		<div  class='my-2'><small>AREA: <span class='highlight'>${area.value}m<sup>2</sup></span></small></div>
-		<div  class='my-2'><small>TILE SIZE: <span class='highlight'>${width.value}mm x ${height.value}mm x ${tDepth.value}mm</span></small></div>
-		<div  class='my-2'><small>GROUT WIDTH: <span class='highlight'>${gWidth.value}mm</span></small>
+		<div  class='my-1'><small>TILE AREA: <span class='highlight'>${
+			area.value
+		}m<sup>2</sup></span></small></div>
+		<div  class='my-1'><small>TILE SIZE: <span class='highlight'>${
+			width.value
+		}mm x ${height.value}mm x ${tDepth.value}mm</span></small></div>
+		<div  class='my-1'><small>GROUT WIDTH: <span class='highlight'>${
+			gWidth.value
+		}mm</span></small>
 		<hr></div>
   <div class="row text-center">
     <div class="col mb-1">
@@ -76,10 +81,9 @@ function onDeviceReady() {
 </div>
 		`;
 		} else {
-			setTimeout(() => {
-				document.getElementById('alert').style.display = 'none';
-			}, 3000);
-			document.getElementById('alert').style.display = 'block';
+			results.innerHTML = `<div class="alert alert-danger text-center" role="alert">
+				Please enter all data before calculating!
+			</div>`;
 		}
 	}
 
