@@ -51,13 +51,13 @@ function onDeviceReady() {
 		</div>
   <div class="row text-center">
     <div class="col mb-1">
-      <div>
+      <div class='shadow-sm'>
         <div class='resultCalc py-3 bg-white'>${result}</div>
         <div class='bg-info text-light'>TILES</div>
       </div>
     </div>
     <div class="col mb-1">
-      <div>
+      <div class='shadow-sm'>
 			<div class="resultCalc py-3 bg-white">${wastage}</div>
         <div class='bg-info text-light'>TILES +${Math.floor(
 					waste.value * 100
@@ -67,13 +67,13 @@ function onDeviceReady() {
   </div>
   <div class="row text-center">
     <div class="col mb-1">
-      <div>
+      <div class='shadow-sm'>
 			<div class="resultCalc py-3 bg-white">${adhesive}<small>kg</small></div>
 			<div class='bg-info text-light'>ADHESIVE</div>
 			</div>
     </div>
     <div class="col mb-1">
-      <div>
+      <div class='shadow-sm'>
 			<div class="resultCalc py-3 bg-white">${grout}<small>kg</small></div>
 			<div class='bg-info text-light'>GROUT</div>
       </div>
@@ -82,7 +82,7 @@ function onDeviceReady() {
 </div>
 		`;
 		} else {
-			results.innerHTML = `<div class="alert alert-danger text-center" role="alert">
+			results.innerHTML = `<div class="alert alert-danger text-center shadow-sm" role="alert">
 				Please input tile dimensions!
 			</div>`;
 		}
