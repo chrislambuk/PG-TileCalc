@@ -38,6 +38,7 @@ function onDeviceReady() {
 
 			results.innerHTML = `
 		<div>
+		<strong>Summary</strong>
 		<div  class='my-1'><small>TILE AREA: <span class='highlight'>${
 			area.value
 		}m<sup>2</sup></span></small></div>
@@ -82,7 +83,7 @@ function onDeviceReady() {
 		`;
 		} else {
 			results.innerHTML = `<div class="alert alert-danger text-center" role="alert">
-				Please enter all data before calculating!
+				Please enter all data!
 			</div>`;
 		}
 	}
