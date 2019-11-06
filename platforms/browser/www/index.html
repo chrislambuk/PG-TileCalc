@@ -22,7 +22,7 @@
         <a href="#" class="navbar-brand mx-auto pt-2">
           <h5>Tile Calculator</h5>
         </a>
-        <button id="helpBtn" class="navbar-toggler" data-toggle="modal" data-target="#helpModal">help
+        <button id="helpBtn" class="navbar-toggler" data-toggle="modal" data-target="#helpModal">Help
         </button>
       </div>
     </div>
@@ -97,25 +97,25 @@
             <h5>Tiling Info</h5>
           </div>
           <div class='card-body bg-dark px-5'>
-              <div class="input-group input-group input-group-sm m-1">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">Area</span>
-                </div>
-                <input id='tileArea' type="number" class="form-control">
-                <div class="input-group-append">
-                  <span class="input-group-text">m<sup>2</sup></span>
-                </div>
+            <div class="input-group input-group input-group-sm m-1">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Area</span>
               </div>
-              <div class="input-group input-group input-group-sm m-1">
-                <div class="input-group-prepend">
-                  <label class="input-group-text" for="wasteVal">Waste</label>
-                </div>
-                <select class="custom-select" id="wasteVal">
-                  <option selected value="1.1">10%</option>
-                  <option value="1.2">20%</option>
-                  <option value="1.3">30%</option>
-                </select>
+              <input id='tileArea' type="number" class="form-control">
+              <div class="input-group-append">
+                <span class="input-group-text">m<sup>2</sup></span>
               </div>
+            </div>
+            <div class="input-group input-group input-group-sm m-1">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="wasteVal">Waste</label>
+              </div>
+              <select class="custom-select" id="wasteVal">
+                <option selected value="1.1">10%</option>
+                <option value="1.2">20%</option>
+                <option value="1.3">30%</option>
+              </select>
+            </div>
           </div>
         </div>
         <!-- tiling info end -->
@@ -128,31 +128,31 @@
   <footer class="footer">
     <div class="container col-md-8 mx-auto">
       <div class="row text-center text-white">
-        <div id='calc' class="bg-primary col p-0" data-toggle="modal" data-target="#resultModal">Calculate</div>
-        <div id='clear' class="bg-secondary col p-0">Clear</div>
+        <div id='calc' class="col bg-primary" data-toggle="modal" data-target="#resultModal">Calculate</div>
+        <div id='clear' class="col bg-secondary">Clear</div>
       </div>
     </div>
   </footer>
 
   <!-- HELP MODAL -->
-  <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  <div class="modal fade mt-3" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header py-2">
           <h5 class="modal-title" id="exampleModalLabel">How To Use</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body bg-light py-2">
           <small>
             Tile Calc is designed to calculate the tiles, adhesive and grout you require for a given area.
             <br>
             <br>
             <ol>
               <li>Input the <strong>Width, Length &amp; Depth</strong> of the tile you are using and the <strong>Grout
-              Width</strong> you require in millimetres.</li>
+                  Width</strong> you require in millimetres.</li>
               <li>Select the extra for cutting and wastage. The default is 10%.</li>
               <li>Enter the <strong>Area</strong> to tile in square metres.</li>
             </ol>
@@ -166,33 +166,33 @@
           </small>
           <br>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer py-2">
           <div class="mr-auto">
             <a href="https://arqmedia.co.uk/tile-calc/"><small>Info</small></a> |
             <a href="https://arqmedia.co.uk/privacy-policy/"><small>Privacy Policy</small></a> |
             <a href="https://arqmedia.co.uk/tcs/"><small>T&Cs</small></a>
           </div>
-          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- RESULT MODAL -->
-  <div class="modal fade" id="resultModal">
+  <div class="modal fade mt-3" id="resultModal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header py-2">
           <h5 class="modal-title" id="exampleModalLabel">RESULTS</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body bg-light py-2">
           <div id="results"></div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+        <div class="modal-footer py-2">
+          <button type="button" class="btn btn-dark btn-block btn-sm" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

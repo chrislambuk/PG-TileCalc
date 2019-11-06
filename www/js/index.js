@@ -48,7 +48,7 @@ function onDeviceReady() {
 		<div  class='my-1'><small>GROUT WIDTH: <span class='highlight'>${
 			gWidth.value
 		}mm</span></small>
-		<hr></div>
+		</div>
   <div class="row text-center">
     <div class="col mb-1">
       <div>
@@ -83,7 +83,7 @@ function onDeviceReady() {
 		`;
 		} else {
 			results.innerHTML = `<div class="alert alert-danger text-center" role="alert">
-				Please enter all data!
+				Please input tile dimensions!
 			</div>`;
 		}
 	}
