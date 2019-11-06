@@ -52,14 +52,14 @@ function onDeviceReady() {
   <div class="row text-center">
     <div class="col mb-1">
       <div>
-        <div class='resultCalc py-3 bg-dark text-light'>${result}</div>
-        <div class='bg-danger text-light'>TILES</div>
+        <div class='resultCalc py-3 bg-white'>${result}</div>
+        <div class='bg-info text-light'>TILES</div>
       </div>
     </div>
     <div class="col mb-1">
       <div>
-			<div class="resultCalc py-3 bg-dark text-light">${wastage}</div>
-        <div class='bg-danger text-light'>TILES +${Math.floor(
+			<div class="resultCalc py-3 bg-white">${wastage}</div>
+        <div class='bg-info text-light'>TILES +${Math.floor(
 					waste.value * 100
 				) - 100}%</div>
       </div>
@@ -68,14 +68,14 @@ function onDeviceReady() {
   <div class="row text-center">
     <div class="col mb-1">
       <div>
-			<div class="resultCalc py-3 bg-dark text-light">${adhesive}<small>kg</small></div>
-			<div class='bg-danger text-light'>ADHESIVE</div>
+			<div class="resultCalc py-3 bg-white">${adhesive}<small>kg</small></div>
+			<div class='bg-info text-light'>ADHESIVE</div>
 			</div>
     </div>
     <div class="col mb-1">
       <div>
-			<div class="resultCalc py-3 bg-dark text-light">${grout}<small>kg</small></div>
-			<div class='bg-danger text-light'>GROUT</div>
+			<div class="resultCalc py-3 bg-white">${grout}<small>kg</small></div>
+			<div class='bg-info text-light'>GROUT</div>
       </div>
     </div>
   </div>
