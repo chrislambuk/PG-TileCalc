@@ -37,8 +37,7 @@ function onDeviceReady() {
 			);
 
 			results.innerHTML = `
-		<div>
-		<strong>Summary</strong>
+		<div class='mb-2>
 		<div  class='my-1'><small>TILE AREA: <span class='highlight'>${
 			area.value
 		}m<sup>2</sup></span></small></div>
@@ -50,14 +49,14 @@ function onDeviceReady() {
 		}mm</span></small>
 		</div>
   <div class="row text-center">
-    <div class="col mb-1">
-      <div class='shadow-sm'>
+    <div class="col mb-3">
+      <div class='shadow'>
         <div class='resultCalc py-3 bg-white'>${result}</div>
         <div class='bg-info text-light'>TILES</div>
       </div>
     </div>
-    <div class="col mb-1">
-      <div class='shadow-sm'>
+    <div class="col mb-3">
+      <div class='shadow'>
 			<div class="resultCalc py-3 bg-white">${wastage}</div>
         <div class='bg-info text-light'>TILES +${Math.floor(
 					waste.value * 100
@@ -66,14 +65,14 @@ function onDeviceReady() {
     </div>
   </div>
   <div class="row text-center">
-    <div class="col mb-1">
-      <div class='shadow-sm'>
+    <div class="col mb-3">
+      <div class='shadow'>
 			<div class="resultCalc py-3 bg-white">${adhesive}<small>kg</small></div>
 			<div class='bg-info text-light'>ADHESIVE</div>
 			</div>
     </div>
-    <div class="col mb-1">
-      <div class='shadow-sm'>
+    <div class="col mb-3">
+      <div class='shadow'>
 			<div class="resultCalc py-3 bg-white">${grout}<small>kg</small></div>
 			<div class='bg-info text-light'>GROUT</div>
       </div>
@@ -83,7 +82,7 @@ function onDeviceReady() {
 		`;
 		} else {
 			results.innerHTML = `<div class="alert alert-danger text-center shadow-sm" role="alert">
-				Please input tile dimensions!
+				Please input tile data!
 			</div>`;
 		}
 	}
