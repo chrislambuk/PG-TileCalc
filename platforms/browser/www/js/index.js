@@ -1,6 +1,8 @@
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
+
+
 	const width = document.getElementById('tileWidth');
 	const height = document.getElementById('tileHeight');
 	const tDepth = document.getElementById('tileDepth');
@@ -58,9 +60,8 @@ function onDeviceReady() {
     <div class="col mb-3">
       <div class='shadow'>
 			<div class="resultCalc py-3 bg-white">${wastage}</div>
-        <div class='bg-info text-light'>TILES +${Math.floor(
-					waste.value * 100
-				) - 100}%</div>
+        <div class='bg-info text-light'>TILES +${Math.floor(waste.value * 100) -
+					100}%</div>
       </div>
     </div>
   </div>
@@ -97,4 +98,14 @@ function onDeviceReady() {
 		area.value = '';
 		resultOutput.innerHTML = ``;
 	}
+		// Set AdMobAds options:
+		admob.setOptions({
+			publisherId: 'ca-app-pub-8816517022745547/6622224221', // Required
+			// interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional
+			tappxIdiOS: 'pub-51137-ios-3987', // Optional
+			// tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
+			tappxShare: 0.5 // Optional
+		});
+		
+		admob.createBannerView();
 }
