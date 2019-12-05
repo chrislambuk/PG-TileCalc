@@ -2,7 +2,6 @@ document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
 
-
 	const width = document.getElementById('tileWidth');
 	const height = document.getElementById('tileHeight');
 	const tDepth = document.getElementById('tileDepth');
@@ -103,7 +102,6 @@ function onDeviceReady() {
 			publisherId: 'ca-app-pub-8816517022745547/6622224221', // Required
 			// interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional
 			tappxIdiOS: 'pub-51137-ios-3987', // Optional
-			// tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
 			tappxShare: 0.5 // Optional
 		});
 		
