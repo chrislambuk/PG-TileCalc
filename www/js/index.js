@@ -51,13 +51,13 @@ function onDeviceReady() {
 		</div>
   <div class="row text-center">
     <div class="col mb-3">
-      <div class='shadow'>
+      <div class='shadow-sm'>
         <div class='resultCalc py-3 bg-white'>${result}</div>
         <div class='bg-info text-light'>TILES</div>
       </div>
     </div>
     <div class="col mb-3">
-      <div class='shadow'>
+      <div class='shadow-sm'>
 			<div class="resultCalc py-3 bg-white">${wastage}</div>
         <div class='bg-info text-light'>TILES +${Math.floor(waste.value * 100) -
 					100}%</div>
@@ -66,13 +66,13 @@ function onDeviceReady() {
   </div>
   <div class="row text-center">
     <div class="col mb-3">
-      <div class='shadow'>
+      <div class='shadow-sm'>
 			<div class="resultCalc py-3 bg-white">${adhesive}<small>kg</small></div>
 			<div class='bg-info text-light'>ADHESIVE</div>
 			</div>
     </div>
     <div class="col mb-3">
-      <div class='shadow'>
+      <div class='shadow-sm'>
 			<div class="resultCalc py-3 bg-white">${grout}<small>kg</small></div>
 			<div class='bg-info text-light'>GROUT</div>
       </div>

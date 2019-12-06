@@ -33,13 +33,13 @@
     <div class="container col-md-8">
       <div>
         <!-- tile info -->
-        <div class="card mb-3">
+        <div class="card mb-3 shadow-none">
           <div class="card-header text-center bg-white pt-2 pb-0">
-            <h5>Tile Dimensions</h5>
+            <h6>Tile Dimensions</h6>
           </div>
           <div class="card-body bg-warning">
             <div>
-              <div class="input-group input-group-sm mb-2 ">
+              <div class="input-group input-group-sm">
                 <div class="input-group-prepend">
                   <span class="input-group-text pretext">Tile Width</span>
                 </div>
@@ -49,9 +49,9 @@
                 </div>
               </div>
             </div>
-            <!-- height -->
+            <!-- length -->
             <div>
-              <div class="input-group input-group-sm mb-2 mx-auto">
+              <div class="input-group input-group-sm my-2 mx-auto">
                 <div class="input-group-prepend">
                   <span class="input-group-text pretext">Tile Length</span>
                 </div>
@@ -64,7 +64,7 @@
             <!-- heigh end -->
             <!-- depth -->
             <div>
-              <div class="input-group input-group-sm mb-2 mx-auto">
+              <div class="input-group input-group-sm mx-auto">
                 <div class="input-group-prepend">
                   <span class="input-group-text pretext">Tile Depth</span>
                 </div>
@@ -75,29 +75,29 @@
               </div>
             </div>
             <!-- depth end -->
-            <!-- grout width -->
-            <div>
-              <div class="input-group input-group-sm max-auto">
-                <div class="input-group-prepend">
-                  <span class="input-group-text pretext">Grout Width</span>
-                </div>
-                <input id='groutWidth' type="number" class="form-control">
-                <div class="input-group-append">
-                  <span class="input-group-text"><small>mm</small></span>
-                </div>
-              </div>
-            </div>
-            <!-- grout width end -->
           </div>
         </div>
         <!-- tile info end -->
-        <!-- titling info -->
-        <div class="card my-1">
+        <!-- titling area info -->
+        <div class="card shadow-none my-1">
           <div class="card-header text-center bg-white pt-2 pb-0">
-            <h5>Tiling Area</h5>
+            <h6>Tiling Area</h6>
           </div>
           <div class='card-body bg-dark'>
-            <div class="input-group input-group input-group-sm m-1">
+              <!-- grout width -->
+              <div>
+                <div class="input-group input-group-sm max-auto">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text pretext">Grout Width</span>
+                  </div>
+                  <input id='groutWidth' type="number" class="form-control">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><small>mm</small></span>
+                  </div>
+                </div>
+              </div>
+              <!-- grout width end -->
+            <div class="input-group input-group input-group-sm my-2 max-auto">
               <div class="input-group-prepend">
                 <span class="input-group-text pretext">Area</span>
               </div>
@@ -106,7 +106,7 @@
                 <span class="input-group-text">m<sup>2</sup></span>
               </div>
             </div>
-            <div class="input-group input-group input-group-sm m-1">
+            <div class="input-group input-group input-group-sm max-auto">
               <div class="input-group-prepend">
                 <label class="input-group-text pretext" for="wasteVal">Waste</label>
               </div>
@@ -125,11 +125,11 @@
 
   <!-- footer -->
 
-  <footer class="footer">
+  <footer class="footer bg-light">
     <div class="container col-md-8 mx-auto">
       <div class="row text-center text-white">
-        <button id='calc' class="col btn-primary btn-sm m-1" data-toggle="modal" data-target="#resultModal">Calculate</button>
-        <button id='clear' class="col btn-secondary btn-sm m-1">Clear</button>
+        <a id='calc' class="col btn-primary btn-sm m-1" data-toggle="modal" data-target="#resultModal">Calculate</a>
+        <a id='clear' class="col btn-secondary btn-sm m-1">Clear</a>
       </div>
     </div>
   </footer>
@@ -148,12 +148,13 @@
         <div class="modal-body bg-light py-2">
           <small>
             <ul>
-              <li>Input the <strong>Width, Length &amp; Depth</strong> of the tile you are using and the <strong>Grout
-                  Width</strong> you require in millimetres.</li>
-              <li>Select the extra for cutting and wastage. The default is 10%.</li>
-              <li>Enter the <strong>Area</strong> to tile in square metres.</li>
+              <li>Input the width, length &amp; depth of the tile you are using.</li>
+              <li>Input the grout width recommended for the tile</li>
+              <li>Input the area you're going to tile in m<sup>2</sup>.</li>
+              <li>Select cutting and wastage percentage. The default is 10%.</li>
             </ul>
-            Click Calculate to see the recommended quantities for tiles, adhesive and grout. Use this as a guide. and check with your supplier before purchasing.
+            Click <button class="btn btn-primary btn-sm py-0">Calculate</button> to see the recommended quantities for tiles, adhesive and grout. 
+            <br>Use this as a guide and check with your supplier before purchasing.
             <br>
             All measurements are metric.
           </small>
