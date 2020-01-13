@@ -8,9 +8,9 @@ function onDeviceReady() {
 	const gWidth = document.getElementById('groutWidth');
 	const area = document.getElementById('tileArea');
 	const waste = document.getElementById('wasteVal');
-	const percent = waste.value;
+	// const percent = waste.value;
 
-	const resultOutput = document.getElementById('result');
+	// const resultOutput = document.getElementById('result');
 
 	document.addEventListener('DOMContentLoaded', reset);
 	document.getElementById('calc').addEventListener('click', calculate);
@@ -95,7 +95,7 @@ function onDeviceReady() {
 		tDepth.value = '';
 		gWidth.value = '';
 		area.value = '';
-		resultOutput.innerHTML = ``;
+		// resultOutput.innerHTML = ``;
 	}
 		// Set AdMobAds options:
 		admob.setOptions({
