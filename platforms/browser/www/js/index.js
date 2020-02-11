@@ -97,11 +97,11 @@ function onDeviceReady() {
 		// resultOutput.innerHTML = ``;
 	}
 	// Set AdMobAds options:
-	admob.setOptions({
-		publisherId: 'ca-app-pub-8816517022745547/6622224221' // Required
-	});
+	// admob.setOptions({
+	// 	publisherId: 'ca-app-pub-8816517022745547/6622224221' // Required
+	// });
 
-	admob.createBannerView();
+	// admob.createBannerView();
 }
 
 var admobid = {};
