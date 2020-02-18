@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.arqmedia.tilecalc" version="2.1.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.arqmedia.tilecalc" version="2.1.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Tile Calc</name>
     <description>
         A tile calculating app.
@@ -11,7 +11,7 @@
     <preference name="phonegap-version" value="cli-8.0.0" />
     <preference name="DisallowOverscroll" value="true" />
     <gap:plugin name="phonegap-admob" source="npm"/>
-    	<config-file target="*-Info.plist" parent="GADApplicationIdentifier">
+    <config-file target="*-Info.plist" parent="GADApplicationIdentifier">
 	<string>ca-app-pub-8816517022745547~3333236973</string>
     </config-file>
     <edit-config file="*-Info.plist" mode="merge" target="UIStatusBarHidden">
