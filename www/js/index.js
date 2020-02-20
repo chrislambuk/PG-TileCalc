@@ -81,7 +81,7 @@ function onDeviceReady() {
 		`;
 		} else {
 			results.innerHTML = `<div class="alert alert-danger text-center shadow-sm" role="alert">
-				Please input tile data!
+				INPUT TILE DATA!
 			</div>`;
 		}
 	}
