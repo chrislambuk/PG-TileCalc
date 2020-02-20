@@ -11,12 +11,12 @@ function onDeviceReady() {
 
 	// const resultOutput = document.getElementById('result');
 
-	document.addEventListener('DOMContentLoaded', reset);
+	// document.addEventListener('DOMContentLoaded', reset);
 	document.getElementById('calc').addEventListener('click', calculate);
 
-	function reset() {
-		document.getElementById('alert').style.display = 'block';
-	}
+	// function reset() {
+	// 	document.getElementById('alert').style.display = 'block';
+	// }
 
 	function calculate() {
 		if (
